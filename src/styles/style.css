@@ -1,0 +1,196 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    color: blue;
+    padding: 10px 20px;
+}
+
+nav .logo img {
+    height: 40px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: blue;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+header.hero {
+    position: relative;
+    background: url('../assets/hero.jpg') no-repeat center center/cover;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+header.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+    z-index: 1;
+}
+
+header.hero h1,
+header.hero p,
+header.hero .cta-button {
+    position: relative;
+    z-index: 2;
+}
+
+header.hero h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+header.hero p {
+    font-size: 1.5em;
+}
+
+header.hero .cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e6552d;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: fit-content;
+    align-self: center;
+}
+
+header.hero .cta-button:hover {
+    background-color: #c0392b;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+button {
+    background: #e6552d;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    max-width: 28px; 
+    margin: 2px;/* Set button width to 28px */
+}
+
+button:hover {
+    background: #c0392b;
+}
+
+footer {
+    background: #f1f1f1;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.feature-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card p {
+    color: #666;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact form label {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+#contact form input,
+#contact form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#contact form button {
+    margin-top: 20px;
+}
